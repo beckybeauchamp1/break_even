@@ -5,6 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-data = JSON.parse(File.read("http://wgr.de/api/v2/?format=json"))
+# # data = JSON.parse(File.read("http://www.google.com"))
+# Exercise.destroy_all
+# Exercise.create!(data)
+Day.destroy_all
 Exercise.destroy_all
-Exercise.create!(data)
+
+Day.create(name: 'Monday',)
+Day.create(name: 'Tuesday')
+Day.create(name: 'Wednesday')
+Day.create(name: 'Thursday')
+Day.create(name: 'Friday')
+Day.create(name: 'Saturday')
+Day.create(name: 'Sunday')
+
+Exercise.create(name: 'Situp', quantity: 30, calorie: 100, day_id:1)
+Exercise.create(name: 'Pushup', quantity: 40, calorie:200, day_id:2)
+Exercise.create(name: 'Jumprope', quantity: 200, calorie:50, day_id:3)
