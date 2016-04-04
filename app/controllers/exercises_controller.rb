@@ -1,5 +1,4 @@
 class ExercisesController < ApplicationController
-
   def index
     @day = Day.find(params[:day_id])
     @exercises = @day.exercises.all
