@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <div class="div_top">
+      <div class="header-text"><h1><%= @day.name %>'s  Workout</h1></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="styletable">
+      <table class="flat-table", align="center">
+
+        <% @day.exercises.each do |exercise| %>
+        <thead>
+          <th>Exercise Name</th>
+          <th>Date</th>
+          <th>Finish Time</th>
+        </thead>
+        <tr>
+          <td><%= exercise.name %></td>
+          <td><%= exercise.quantity %></td>
+          <td><%= exercise.calorie%></td>
+          <td><%= link_to 'edit', edit_day_exercise_path(@day, exercise) %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <div class="button"><%= link_to 'Add New Exercise', new_day_exercise_path(@day, @exercise) %>
+      <%= link_to 'New Day', new_day_path(@day) %>
+      <%= link_to 'Home', root_path %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

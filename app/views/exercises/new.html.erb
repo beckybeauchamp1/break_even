@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="div_top">
+    <h1>Break Even</h1>
+  </div>
+
+  <div class="form">
+    <%= form_for [@day, @exercise] do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name%>
+    </p>
+    <p>
+      <%= f.label :quantity %><br>
+      <%= f.date_field :quantity %>
+    </p>
+    <p>
+      <%= f.label :calorie %><br>
+      <%= f.text_field :calorie %>
+    </p>
+    <p>
+      <%= f.submit "Submit", :class => "form-button" %>
+    </p>
+    <% end %>
+  </div>
+</body>
+</html>

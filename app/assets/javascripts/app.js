@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module('breakEven'[
+  .module("breakEven",[
     "ui.router",
     "ngResource",
     "days",
@@ -16,6 +16,9 @@
    $stateProvider
    .state("welcome", {
      url: "",
-     templateUrl: "js/welcome.html"
-   })
+     templateUrl: "js/welcome.html",
+     controller: "WelcomeController",
+     controllerAs: "WelcomeViewModel"
+   });
+ }
 })();
