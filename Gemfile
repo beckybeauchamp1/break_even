@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'pg'
 
 
 group :development, :test do
@@ -48,4 +49,3 @@ group :production do
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "rails_12factor", group: :production
-gem 'pg'
