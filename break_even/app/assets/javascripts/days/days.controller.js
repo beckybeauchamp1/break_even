@@ -4,11 +4,11 @@
   angular
   .module("days")
   .controller("DayIndexController", [
+    "DayFactory",
     DayIndexControllerFunction
   ]);
 
-  function DayIndexControllerFunction(){
-    this.days = [
-    ]
-  }
+  function DayIndexControllerFunction(DayFactory){
+    this.days = DayFactory.query();
+}
 }());

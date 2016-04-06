@@ -1,6 +1,8 @@
 "use strict";
-
-(function(){
+//
+(function (){
   angular
-  .module("days", []);
-}());
+  .module("days", [
+    "ngResource"
+  ]);
+})();

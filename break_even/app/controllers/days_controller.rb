@@ -1,6 +1,9 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.order(:name_of_day)
+    respond_to do |format|
+      format.html
+      format.json { render json: Day.all}
+    end
   end
 
   def new

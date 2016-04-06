@@ -4,11 +4,13 @@
   angular
   .module("exercises")
   .controller("ExerciseIndexController", [
+    "ExerciseFactory",
+    "DayFactory",
     ExerciseIndexControllerFunction
   ]);
 
-  function ExerciseIndexControllerFunction(){
-    this.exercises = [
-    ]
+  function ExerciseIndexControllerFunction(ExerciseFactory, DayFactory){
+    this.exercises = ExerciseFactory.query();
+    this.days = DayFactory.query();
   }
 }());

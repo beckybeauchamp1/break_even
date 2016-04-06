@@ -1,6 +1,8 @@
 "use strict";
-
-(function(){
+//
+(function (){
   angular
-  .module("exercises", []);
-}());
+  .module("exercises", [
+    "ngResource"
+  ]);
+})();
