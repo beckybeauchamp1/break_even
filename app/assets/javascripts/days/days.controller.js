@@ -9,6 +9,10 @@
   ]);
 
   function DayIndexControllerFunction(DayFactory){
+    var vm = this;
     this.days = DayFactory.query();
+    this.day = function(day){
+      vm.dayClicked = day;
+    }
 }
 }());

@@ -28,7 +28,7 @@
 
     .state("calendar", {
       url: "/days",
-      templateUrl: "ngviews/myWeek.html",
+      templateUrl: "ngviews/calendar.html",
       controller: "DayIndexController",
       controllerAs: "DayIndexViewModel"
     })
@@ -36,8 +36,8 @@
     .state("dayShow", {
       url: "/day/:id",
       templateUrl: "ngviews/day.html",
-      controller: "DayShowController",
-      controllerAs: "DayShowViewModel"
+      controller: "DayIndexController",
+      controllerAs: "DayIndexViewModel"
     })
     .state("dayEdit", {
       url: "/day/:id/edit",

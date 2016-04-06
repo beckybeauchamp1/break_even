@@ -1,1 +1,10 @@
 <h1>calendar</h1>
+
+
+</div>
+<div data-ng-repeat="day in DayIndexViewModel.days">
+  <div class="day"><a data-ui-sref="DayShow({id: vm.dayClicked.id})">
+{{day.name_of_day}}</a>
+  </div>
+
+</div>
