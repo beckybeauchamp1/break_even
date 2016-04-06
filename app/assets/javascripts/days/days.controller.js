@@ -9,6 +9,6 @@
   ]);
 
   function DayIndexControllerFunction(DayFactory){
-    DayFactory.helloWorld();
+    this.days = DayFactory.query();
   }
 }());

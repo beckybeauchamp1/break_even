@@ -1,17 +1,18 @@
+console.log("factory")
 "use strict";
 
 (function(){
   angular
     .module( "exercises" )
-    .factory( "ExerciseFactory", [
+    .factory( "ExerciseFactory",[
+      "$resource",
       ExerciseFactoryFunction
     ]);
 
-  function ExerciseFactoryFunction(){
+  function ExerciseFactoryFunction($resource){
+    console.log("aksljdflkjsdf");
     return {
-      helloWorld: function(){
-        console.log( "Hello world!" );
-      }
+      $resource( "http://localhost:3000/exercises/:id" );
     }
   }
-}());
+})();

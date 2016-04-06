@@ -3,7 +3,7 @@
 
 (function(){
   angular
-  .module("breakEven", [
+  .module("breakEven",[
     "ui.router",
     "ngResource",
     "exercises",

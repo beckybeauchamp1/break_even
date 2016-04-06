@@ -4,14 +4,13 @@
   angular
     .module( "days" )
     .factory( "DayFactory", [
+      "$resource",
       DayFactoryFunction
     ]);
 
-  function DayFactoryFunction(){
+  function DayFactoryFunction($resource){
     return {
-      helloWorld: function(){
-        console.log( "Hello world!" );
-      }
+    $resource( "http://localhost:3000/days/:id" );
     }
   }
 }());
