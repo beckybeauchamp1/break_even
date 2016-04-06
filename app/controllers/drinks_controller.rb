@@ -1,40 +1,48 @@
-class RewardsController < ApplicationController
+class DrinksController < ApplicationController
 
   def index
-    @drinks = Drink.order(:last_name)
-  end
-
-  def new
-    @drink = Drink.new
+    respond_to do |format|
+      format.html
+      format.json { render json: Drink.all}
+    end
   end
 
   def create
-    @drink = Drink.create!(drink_params)
-    redirect_to drinks_path
+    @drink = Drink.new(drink_params)
+        if @drink.save
+          render json: @day.to_json, status: :created
+        else
+          render json: @day.errors, status: :unprocessable_entity
+        end
   end
 
   def show
     @drink = Drink.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json {render json: @drink.to_json, status: :ok}
+    end
   end
 
-  def edit
-    @drink = Drink.find(params[:id])
-  end
 
   def update
     @drink = Drink.find(params[:id])
-    @drink.update(drink_params)
-    redirect_to drinks_path
+    if @drink.update(drink_params)
+      render json: @drink.to_json, status: :ok
+    else
+      render json: @drink.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @drink = Drink.find(params[:id])
     @drink.destroy
-    redirect_to drinks_path
+    render json: {status: "success"}, status: :ok
   end
 
   private
   def drink_params
-    params.require(:drink).permit(:drdrink_type, :calorie_count)
+    params.require(:drink).permit(:body)
   end
+
 end
