@@ -4,11 +4,15 @@
   angular
   .module("drinks")
   .controller("DrinksIndexController", [
-    "DrinksFactory",
+    "DrinkFactory",
+    "ExerciseFactory",
+    "DayFactory"
     DrinksIndexControllerFunction
   ]);
 
-  function DrinksIndexControllerFunction(DrinksFactory){
-    this.drinks = DrinksFactory.query();
-}
+  function DrinksIndexControllerFunction(DrinkFactory){
+    this.drinks = DrinkFactory.query();
+      this.exercises = ExerciseFactory.query();
+      this.days = DayFactory.query();
+    }
 }());
