@@ -8,7 +8,7 @@ class ExercisesController < ApplicationController
     end
 
     def create
-      @exercise = Exercise.new(day_params)
+      @exercise = Exercise.new(exercise_params)
           if @exercise.save
             render json: @day.to_json, status: :created
           else
