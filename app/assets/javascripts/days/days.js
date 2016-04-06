@@ -1,9 +1,6 @@
 "use strict";
-//
-(function (){
+
+(function(){
   angular
-  .module("breakEven")
-  .controller("DayShowController", function(){
-    this.test = "day show is working";
-  })
-})();
+  .module("days", []);
+}());

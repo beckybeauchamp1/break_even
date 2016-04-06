@@ -5,7 +5,9 @@
   angular
   .module("breakEven", [
     "ui.router",
-    "ngResource"
+    "ngResource",
+    "exercises",
+    "days"
   ])
   .config([
     "$stateProvider",
@@ -17,7 +19,7 @@
       url: "/",
       templateUrl: "ngviews/home.html",
     })
-    .state("exercises", {
+    .state("exerciseIndex", {
       url: "/exercises",
       templateUrl: "ngviews/exercises.html",
       controller: "ExerciseIndexController",

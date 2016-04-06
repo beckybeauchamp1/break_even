@@ -1,11 +1,6 @@
-
-
 "use strict";
 
-(function (){
+(function(){
   angular
-  .module("breakEven")
-  .controller("ExerciseIndexController", function(){
-    this.test = "poop";
-  })
-})();
+  .module("exercises", []);
+}());
