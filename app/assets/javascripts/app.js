@@ -7,7 +7,8 @@
     "ui.router",
     "ngResource",
     "exercises",
-    "days"
+    "days",
+    "drinks"
   ])
   .config([
     "$stateProvider",
