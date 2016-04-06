@@ -10,6 +10,6 @@
 
   function DayFactoryFunction($resource){
     console.log("yolo");
-    return $resource( "http://localhost:3000/days/:id.json" );
+    return $resource( "http://localhost:3000/days.json" );
     }
 }());
