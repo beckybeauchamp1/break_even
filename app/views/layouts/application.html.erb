@@ -9,8 +9,11 @@
   <%= javascript_include_tag "app"%>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "app", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "exercises", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "days", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "exercises/exercises", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "exercises/exercises.factory.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "days/days", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "days/days.factory.js", "data-turbolinks-track" => true %>
+
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "welcome", property: :stylesheet %>
   <%= stylesheet_link_tag "application", property: :stylesheet %>
