@@ -26,5 +26,6 @@
       console.log("it'll be okay. I'm here")
       console.log(calories)
     }
+    this.beers = [{name: 'Coors', calories: 90}, {name: "Molson", calories: 100}]
   }
 }());
