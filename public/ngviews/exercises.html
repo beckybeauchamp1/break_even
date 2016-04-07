@@ -1,6 +1,6 @@
 <div class="exname" data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
 <p>
-{{exercise.exercise_name}}
+  <input type="checkbox" name="exercise" value="name"><label>{{exercise.exercise_name}}</label>
 
 <span class="excal" data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
 </p>
