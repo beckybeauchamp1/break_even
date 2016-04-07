@@ -2172,3 +2172,25 @@ Started GET "/days.json" for ::1 at 2016-04-06 23:26:27 -0400
 Processing by DaysController#index as JSON
   [1m[36mDay Load (0.7ms)[0m  [1mSELECT "days".* FROM "days"[0m
 Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-04-07 09:13:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 356ms (Views: 344.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/belly.jpg" for ::1 at 2016-04-07 09:13:34 -0400
+
+
+Started GET "/exercises.json" for ::1 at 2016-04-07 09:13:48 -0400
+Processing by ExercisesController#index as JSON
+  [1m[35mExercise Load (4.1ms)[0m  SELECT "exercises".* FROM "exercises"  ORDER BY updated_at DESC
+Completed 200 OK in 38ms (Views: 16.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/days.json" for ::1 at 2016-04-07 09:13:48 -0400
+Processing by DaysController#index as JSON
+  [1m[36mDay Load (0.6ms)[0m  [1mSELECT "days".* FROM "days"[0m
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 3.0ms)
