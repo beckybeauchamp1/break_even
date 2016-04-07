@@ -1,9 +1,16 @@
-<h2>These are all the Days</h2>
+<div data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
+<p>
+{{exercise.exercise_name}}
 
-
-
+<span data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
+</p>
 </div>
-<div data-ng-repeat="day in DayIndexViewModel.days">
-{{day.name_of_day}}
 
+
+<p>Total Calories: <span id='totalCalories'>{{ExerciseIndexViewModel.totalCalories()}}</span></p>
+
+<div id="beers">
+  <div data-ng-repeat="beer in ExerciseIndexViewModel.beers">
+    {{beer.name}}, {{beer.calories}}: Are you ready? {{ExerciseIndexViewModel.totalCalories()/beer.calories}} beers.
+  </div>
 </div>
