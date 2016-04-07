@@ -2,14 +2,23 @@
 
 (function(){
   angular
-    .module( "days" )
-    .factory( "DayFactory", [
-      "$resource",
-      DayFactoryFunction
-    ]);
+  .module( "days" )
+  .factory( "DayFactory", [
+    "$resource",
+    DayFactoryFunction
+  ]);
 
   function DayFactoryFunction($resource){
-    console.log("working?");
-    return $resource( "http://localhost:3000/days.json" );
-    }
+    return $resource( "http://localhost:3000/days.json" , {}, {
+      update: {
+        method: "PUT"
+      },
+      exercises: {
+        method: "GET",
+        url: "http://localhost:3000/exercises.json",
+        isArray: true
+      }
+    });
+  }
+
 }());

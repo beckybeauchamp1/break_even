@@ -4,26 +4,33 @@
 </div>
 <div data-ng-repeat="day in DayIndexViewModel.days">
   <div class="day"><a data-ui-sref="DayShow({id: vm.dayClicked.id})">
-{{day.name_of_day}}</a>
+    {{day.name_of_day}}</a>
   </div>
 
+  <div class="exercises-div" ng-controller="DayIndexController as vm"  ng-app="BreakEven">
+    <div class="exercises-div" data-ng-repeat="exercise in vm.exercises.$$state.value">
+      <button class="exercise-button">{{exercise}}</button>
+    </div>
+  </div>
+</div>
+  <!--
   <label>Check your Day: <input type="checkbox" ng-model="selected"></label><br/>
   <select aria-label="ngSelected demo">
-    <option>Pilates</option>
-    <option>Aerobics</option>
-    <option>Dancing</option>
-    <option>Running</option>
-    <option>Elliptical</option>
-    <option>Stationary Bike</option>
-    <option>Machine Preacher Curl</option>
-    <option>Standing Cable Pushdown</option>
-    <option>EZ Bar Skullcrusher</option>
-    <option>Standing Biceps Cable Curl</option>
-    <option>Upright Barbell Row</option>
-    <option>Machine Shoulder Press</option>
-    <option>Wide Grip Lat Pulldown</option>
-    <option>Sit Ups</option>
-    <option>Push Ups</option>
-    <option>Barbell Bench Press</option>
+  <option>Pilates</option>
+  <option>Aerobics</option>
+  <option>Dancing</option>
+  <option>Running</option>
+  <option>Elliptical</option>
+  <option>Stationary Bike</option>
+  <option>Machine Preacher Curl</option>
+  <option>Standing Cable Pushdown</option>
+  <option>EZ Bar Skullcrusher</option>
+  <option>Standing Biceps Cable Curl</option>
+  <option>Upright Barbell Row</option>
+  <option>Machine Shoulder Press</option>
+  <option>Wide Grip Lat Pulldown</option>
+  <option>Sit Ups</option>
+  <option>Push Ups</option>
+  <option>Barbell Bench Press</option> -->
 
-  </select>
+  <!-- </select> -->

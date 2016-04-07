@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .day {
-    background: url(#) no-repeat center center fixed;
-    background-size: cover;
+  background: url(#) no-repeat center center fixed;
+  background-size: cover;
+}
+.exercises-div{
+  display: inline;
+  font-size: 14px;
+}
+.exercise-button{
+  color: black;
+  background-color: rgba(255,255,255,0.5);
+  margin: 5px;
+}
+.exercise-button:active{
+  background-color: yellow;
+}
+
+.exercise-button:focus{
+  background-color: rgba(255, 255, 255, 0.9);
 }

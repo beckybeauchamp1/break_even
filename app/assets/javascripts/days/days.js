@@ -3,6 +3,9 @@
 (function (){
   angular
   .module("days", [
-    "ngResource"
+    "ngResource",
+    "ngAnimate",
+    "ngAria",
+    "ngMaterial"
   ]);
 })();
