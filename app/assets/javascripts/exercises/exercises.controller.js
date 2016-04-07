@@ -19,6 +19,5 @@
       })
       return totalCalories;
     }
-    this.beers = [{name: 'Coors', calories: 90}, {name: "Molson", calories: 100}]
   }
 }());
