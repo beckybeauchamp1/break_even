@@ -1,8 +1,8 @@
-<div data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
+<div class="exname" data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
 <p>
 {{exercise.exercise_name}}
 
-<span data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
+<span class="excal" data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
 </p>
 </div>
 
