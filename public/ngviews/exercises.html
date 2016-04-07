@@ -1,4 +1,30 @@
 <div data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
+<p>
 {{exercise.exercise_name}}
 
+<span data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
+</p>
 </div>
+
+
+<p>Total Calories: <span id='totalCalories'>{{ExerciseIndexViewModel.totalCalories()}}</span></p>
+
+<div id="beers">
+  <div data-ng-repeat="beer in ExerciseIndexViewModel.beers">
+    {{beer.name}}, {{beer.calories}}: I can drink {{ExerciseIndexViewModel.totalCalories()/beer.calories}} beers.
+  </div>
+</div>
+<!-- <script>
+$(document).ready(calculateCalories);
+
+function calculateCalories(){
+  console.log("in calcCal")
+  var totalCalories = 0;
+  $('p[data-calories-burned]').each(function(index, element){
+    calories = element.data('calories_burned')
+    console.log("cal", calories)
+    totalCalories += calories
+  })
+  $('#totalCalories').html(totalCalories);
+}
+</script> -->
