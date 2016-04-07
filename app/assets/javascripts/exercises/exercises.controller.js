@@ -10,14 +10,21 @@
   ]);
 
   function ExerciseIndexControllerFunction(ExerciseFactory, DayFactory){
+    var vm = this;
     this.exercises = ExerciseFactory.query();
     this.days = DayFactory.query();
-    this.totalCalories = function() {
-      var totalCalories = 0;
-      this.exercises.forEach(function(exercise, index){
-        totalCalories += exercise.calories_burned;
-      })
-      return totalCalories;
+    this.totalCalories = 0
+    // function() {
+    //   var totalCalories = 0;
+    //   this.exercises.forEach(function(exercise, index){
+    //     totalCalories += exercise.calories_burned;
+    //   })
+    //   return totalCalories;
+    // }
+    this.change = function(calories){
+      vm.totalCalories += calories
+      console.log("it'll be okay. I'm here")
+      console.log(calories)
     }
   }
 }());

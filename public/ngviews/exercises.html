@@ -1,13 +1,13 @@
 <div class="exname" data-ng-repeat="exercise in ExerciseIndexViewModel.exercises">
 <p>
-  <input type="checkbox" name="exercise" value="name"><label>{{exercise.exercise_name}}</label>
+  <input type="checkbox" name="exercise" value="name" data-ng-model="confirmed" data-ng-change="ExerciseIndexViewModel.change(exercise.calories_burned)"><label>{{exercise.exercise_name}}</label>
 
 <span class="excal" data-calories-burned={{exercise.calories_burned}}>{{exercise.calories_burned}}</span>
 </p>
 </div>
 
 
-<p>Total Calories: <span id='totalCalories'>{{ExerciseIndexViewModel.totalCalories()}}</span></p>
+<p>Total Calories: <span id='totalCalories'>{{ExerciseIndexViewModel.totalCalories}}</span></p>
 
 <div id="beers">
   <div data-ng-repeat="beer in ExerciseIndexViewModel.beers">
