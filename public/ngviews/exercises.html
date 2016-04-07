@@ -10,7 +10,7 @@
 <p>Total Calories: <span id='totalCalories'>{{ExerciseIndexViewModel.totalCalories}}</span></p>
 
 <div id="beers">
-  <div data-ng-repeat="beer in ExerciseIndexViewModel.beers">
-    {{beer.name}}, {{beer.calories}}: Are you ready? {{ExerciseIndexViewModel.totalCalories/beer.calories}} beers.
+  <div class="drinknames" data-ng-repeat="beer in ExerciseIndexViewModel.beers">
+    {{beer.name}}, {{beer.calories}}: I can BREAK EVEN with: {{ExerciseIndexViewModel.totalCalories/beer.calories}} of these bastards!
   </div>
 </div>

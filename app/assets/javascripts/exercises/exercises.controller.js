@@ -26,6 +26,6 @@
       console.log("it'll be okay. I'm here")
       console.log(calories)
     }
-    this.beers = [{name: 'Coors', calories: 90}, {name: "Molson", calories: 100}]
+    this.beers = [{name: 'Natty Boh', calories: 135}, {name: "Troegs", calories: 250},{name: "Yuengling", calories: 128},{name: "PBR", calories: 144},{name: "Guinness", calories: 125},{name: "Vodka Water w/ three lemons tall", calories: 96}]
   }
 }());
